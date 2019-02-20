@@ -2,7 +2,7 @@ server:
   port: 8082
 
 spring:
-  applocation: 
+  application:
     name: xiuyuCloud
  
 eureka: 
