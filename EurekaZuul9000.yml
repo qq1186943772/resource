@@ -7,7 +7,7 @@ spring:
 
 zuul: 
   #ignored-services: xiuyuCloud
-  #prefix: /ai             配置路由前缀 
+  prefix: /ai            # 配置路由前缀 
   ignored-services: "*"    # 要拦截的服务 
   routes: 
     xiuyuCloud.serviceId: xiuyuCloud 
