@@ -1,0 +1,22 @@
+server: 
+  port: 9000
+ 
+spring: 
+  application:
+    name: EurakaZuul9000
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka-10010.com:10012/eureka/,http://eureka-10011.com:10011/eureka/,http://eureka-10010.com:10010/eureka/
+  instance:
+    instance-id: zuul-9000.com
+    prefer-ip-address: true 
+ 
+zuul: 
+  #ignored-services: xiuyuCloud
+  prefix: /ai               # 配置路由前缀 
+  ignored-services: "*"     # 要拦截的服务 
+  routes: 
+    xiao.serviceId: xiuyuCloud 
+    xiao.path: /xiuyu/** 
